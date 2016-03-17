@@ -18,6 +18,7 @@ module Asciidoctor
         @confluence_options = options[:confluence]
         @asciidoctor_options = options
         @asciidoctor_options[:to_file] = false
+        @asciidoctor_options[:backend] = 'xhtml'
         @asciidoctor_options[:header_footer] = false
 
         if (options[:input_files].is_a? ::Array) && (options[:input_files].length == 1)
